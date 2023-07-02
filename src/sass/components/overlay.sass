@@ -26,8 +26,8 @@
     align-items: center
     width: 100%
     min-height: 100%
-        
-  .overlay__bg 
+
+  .overlay__bg
     position: absolute
     top: 0
     right: 0
@@ -36,7 +36,7 @@
     z-index: 20
     background-color: rgba($color__1, 0.8)
 
-  .overlay__content 
+  .overlay__content
     position: relative
     z-index: 21
     transform: scale(1)
@@ -61,7 +61,7 @@
       right: 50%
       transform: translateX(50%)
 
-    &:before,&:after 
+    &:before,&:after
       content: ""
       position: absolute
       width: 20px
@@ -75,7 +75,7 @@
       &:before,&:after
         background-color: $color__4
 
-    &:before 
+    &:before
       transform: rotate(45deg)
 
     &:after
@@ -84,7 +84,7 @@
 html.overlay-active
   overflow-y: hidden !important
 
-html.overlay-active 
+html.overlay-active
   padding-right: 16px
 
   +small

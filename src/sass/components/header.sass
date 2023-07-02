@@ -60,12 +60,12 @@
 
 .home-page .header-bottom
   border-bottom: 2px solid $color__1
-  
+
 .header-top
   display: flex
   flex-direction: column
   background-color: $color__1
-    
+
   .content
     display: flex
     flex-direction: row
@@ -88,7 +88,7 @@
       max-width: 185px
       min-height: 60px
       transform: translateX(-40%)
-      
+
       +small
         transform: none
 
@@ -109,7 +109,7 @@
 
       +small
         display: none
-        
+
       &__item
         display: flex
 
@@ -129,11 +129,11 @@
 
     .menu__toggle
       display: none
-    
+
     +small
       &__list-link
         display: none
-        
+
       &__list-feedback
         display: none
 
@@ -183,14 +183,14 @@
               transform-origin: bottom left
               left: 50%
               bottom: 50%
-              
+
     .svg-reset
       fill: $color__2
       transition: fill .2s ease-in-out
 
       &:hover
         fill: $color__1
-        
+
 .header-bottom
   margin-bottom: 0
   padding: 31px 0
@@ -254,17 +254,17 @@
     &__list
       display: flex
       > .menu__item
-          margin-right: 60px
+        margin-right: 60px
 
-          &:last-child
-            margin-right: 0
+        &:last-child
+          margin-right: 0
 
           &:hover
-              > a
-                color: $color__4
+            > a
+              color: $color__4
 
               .list-inner
-                  display: block
+                display: block
 
               .arrow-list
                 transition: fill .2s ease-in-out, transform .2s ease-in-out
@@ -275,33 +275,33 @@
                   fill: $color__4
 
           &.active
-              &__link
-                color: $color__4
-                  
-          > .menu__link-item
-              position: relative
-              z-index: 100
-              display: block
-              font-weight: 700
-              font-size: 16px
-              line-height: 22px
-              padding: 0 4px
-              color: $color__1
-              text-transform: uppercase
-              transition: all .2s
+            &__link
+              color: $color__4
 
-              &::after
-                content: ""
-                display: block
-                position: absolute
-                z-index: -1
-                left: 0
-                bottom: 2px
-                width: 100%
-                height: 2px
-                background-color: $color__4
-                opacity: 0
-                transition: all .2s
+          > .menu__link-item
+            position: relative
+            z-index: 100
+            display: block
+            font-weight: 700
+            font-size: 16px
+            line-height: 22px
+            padding: 0 4px
+            color: $color__1
+            text-transform: uppercase
+            transition: all .2s
+
+            &::after
+              content: ""
+              display: block
+              position: absolute
+              z-index: -1
+              left: 0
+              bottom: 2px
+              width: 100%
+              height: 2px
+              background-color: $color__4
+              opacity: 0
+              transition: all .2s
 
       .arrow-list
         position: static
@@ -315,36 +315,36 @@
           fill: $color__1
 
       .list-inner
-          position: absolute
-          top: 27px
-          left: 0
-          z-index: 100
-          display: none
-          padding: 14px 20px
-          width: 280px
-          color: $color__2
-          background-color: $color__1
-          font-size: 18px
-          > .menu__item
-              padding-bottom: 11px
-              text-align: start
-              font-size: 16px
+        position: absolute
+        top: 27px
+        left: 0
+        z-index: 100
+        display: none
+        padding: 14px 20px
+        width: 280px
+        color: $color__2
+        background-color: $color__1
+        font-size: 18px
+        > .menu__item
+          padding-bottom: 11px
+          text-align: start
+          font-size: 16px
 
-              &::after
-                display: none
+          &::after
+            display: none
 
-              &:last-child
-                margin-bottom: 0
-                padding-bottom: 0
+            &:last-child
+              margin-bottom: 0
+              padding-bottom: 0
 
               &.active
                 color: $color__4
 
               > a
-                  font-weight: 500
-                  transition: color .2s ease-in-out
-                  &:hover
-                    color: $color__4
+                font-weight: 500
+                transition: color .2s ease-in-out
+                &:hover
+                  color: $color__4
 
           &__link-item
             transition: color .2s ease-in-out
@@ -356,7 +356,7 @@
 
             .list-inner__link-item
               color: $color__4
-              
+
             .list-inner__arrow svg
               fill: $color__4
 
@@ -455,21 +455,21 @@
   height: 100%
 
   .menu-list > .menu-item
-      position: relative
-      margin-right: 63px
+    position: relative
+    margin-right: 63px
 
-      +medium
-        margin-right: 36px
+    +medium
+      margin-right: 36px
 
       &:last-child
         margin-right: 0
 
       &:hover
-          > a
-            color: $color__2
+        > a
+          color: $color__2
 
           .list-inner
-              display: block
+            display: block
 
           .arrow-list
             transform: rotate(180deg)
@@ -479,27 +479,27 @@
               fill: $color__2
 
       &.active > .menu-link
-          color: $color__2
-                
-      > a
-          position: relative
-          z-index: 1
-          font-weight: 700
-          font-size: 16px
-          line-height: 22px
-          color: $color__2
-          text-transform: uppercase
-          transition: all 0.2s
+        color: $color__2
 
-          .arrow-list
-              display: inline-flex
-              width: 11px
-              height: 11px
-              top: 29%
-              left: 69px
-              transition: all 0.2s
-              svg
-                fill: $color__2
+      > a
+        position: relative
+        z-index: 1
+        font-weight: 700
+        font-size: 16px
+        line-height: 22px
+        color: $color__2
+        text-transform: uppercase
+        transition: all 0.2s
+
+        .arrow-list
+          display: inline-flex
+          width: 11px
+          height: 11px
+          top: 29%
+          left: 69px
+          transition: all 0.2s
+          svg
+            fill: $color__2
 
       .display
         display: block

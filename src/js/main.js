@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     burgerBtn.addEventListener('click', () => {
       burgerBtn.classList.toggle('open');
       burgerMenu.classList.toggle('active');
-    })
+    });
   }
-  burgerMenu()
+  burgerMenu();
 
   // Стрелка прокрутка на вверх
   function scrollTop() {
@@ -42,35 +42,57 @@ document.addEventListener('DOMContentLoaded', () => {
           window.scrollTo({
             top: 0,
             left: 0,
-            behavior: 'smooth'
+            behavior: 'smooth',
           });
-        }
-      }
-    }
+        };
+      },
+    };
 
     btnUp.addEventListener();
   }
-  scrollTop()
+  scrollTop();
 
   // Аккордеон
-  this._el.addEventListener('click', (e) => {
-    // получим элемент .ac-btn
-    const elHeader = e.target.closest('.ac-btn');
-    // если такой элемент не найден, то прекращаем выполнение функции
-    if (!elHeader) {
-      return;
+  function accordion() {
+    const acItem = document.querySelectorAll('.accordion .ac-btn'),
+      acText = document.querySelectorAll('.accordion .ac-text');
+
+    acText.forEach((e) => {
+      e.classList.add('overflow-hidden');
+    });
+
+    acItem.forEach((e) => {
+      e.addEventListener('click', () => {
+        const acContent = e.nextElementSibling;
+
+        if (acContent.style.maxHeight) {
+          document.querySelectorAll('.accordion .ac-text').forEach((e) => (e.style.maxHeight = null));
+          e.classList.remove('active');
+        } else {
+          document.querySelectorAll('.accordion .ac-text').forEach((e) => (e.style.maxHeight = null));
+          acContent.style.maxHeight = acContent.scrollHeight + 'px';
+          e.classList.add('active');
+        }
+      });
+    });
+  }
+  accordion();
+
+  /// Отправка форм
+  (function () {
+    let submitButtons = document.querySelectorAll('button.submit');
+
+    /// novalid если не прошла валидацию запрещаем отправку
+    for (let submitButton of submitButtons) {
+      submitButton.addEventListener('click', function (event) {
+        let target = event.target;
+        if (target.classList.contains('submit')) {
+          let formNovalid = target.closest('.novalid');
+          if (formNovalid) {
+            event.preventDefault();
+          }
+        }
+      });
     }
-    // если необходимо, чтобы всегда был открыт один элемент
-    if (!this._config.alwaysOpen) {
-      // получим элемент с классом ac-text и сохраним его в переменную elOpenItem
-      const elOpenItem = this._el.querySelector('.ac-text');
-      // если такой элемент есть
-      if (elOpenItem) {
-        // и он не равен текущему, то переключим ему класс ac-text
-        elOpenItem !== elHeader.parentElement ? elOpenItem.classList.toggle('ac-text') : null;
-      }
-    }
-    // переключим класс ac-text элемента .accordion__header
-    elHeader.parentElement.classList.toggle('ac-text');
-  });
-})
+  })();
+});
